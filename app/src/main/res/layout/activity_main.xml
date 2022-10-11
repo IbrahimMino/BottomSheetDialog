@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       >
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <Button
+               android:id="@+id/btn_dialog"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_centerHorizontal="true"
+               android:layout_margin="10dp"
+               android:text="Bottom sheet Dialog"/>
+       </RelativeLayout>
+   </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:behavior_hideable="true"
+        android:elevation="5dp"
+        app:behavior_peekHeight="55dp"
+        android:background="#00B5FF"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        >
+       <TextView
+           android:id="@+id/bottomSheetText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textAlignment="center"
+           android:text="BOTTOM SHEET DIALOG"
+           android:textStyle="bold"
+           android:textColor="@color/white"
+           android:textSize="22dp"/>
+
+
+               </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
